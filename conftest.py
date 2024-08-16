@@ -4,6 +4,7 @@ import pytest
 from src.helpers.api_request_wrapper import post_request
 from src.constants.api_constants import APIconstants
 from src.helpers.payload_manager import payload_create_token
+from src.helpers.payload_manager import payload_create_booking
 from src.helpers.common_verification import * # star means import all of them
 from src.utils.utils import Utils
 
