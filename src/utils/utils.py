@@ -23,6 +23,14 @@ class Utils(object):
         }
         return headers
 
+    def common_header_put_delete_patch_cookie(self, token):
+        headers = {
+            "Content-Type": "application/json",
+            "Cookie": "token=" + str(token),
+        }
+        return headers
+
+
 
 
 

@@ -12,11 +12,11 @@ from src.utils.utils import Utils
 @pytest.fixture(scope="session")
 def create_token():
     response = post_request(
-        url=APIconstants().auth_createtoken(),
+        url=APIconstants().url_createbooking(),
         headers=Utils().common_headers_json(),
         auth=None,
-        payload=payload_create_token,
-        in_json=False,
+        payload=payload_create_token(),
+        in_json=False
     )
     verify_http_status_code(response_data=response, expect_data=200)
     verify_json_key_for_not_null_token(response.json()["token"])
